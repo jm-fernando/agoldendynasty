@@ -4,7 +4,7 @@ const margin = {top: 10, right: 30, bottom: 20, left: 50},
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-const svg = d3.select("#my_dataviz")
+const svg = d3.select("#page-3")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -26,8 +26,8 @@ svg.append("text")
 
 
 
-// Parse the Data
-d3.csv("data/mj_vs_sk_ppg.csv").then(function(data) {
+// Parsing the Data
+d3.csv("js/data/mj_vs_sk_ppg.csv").then(function(data) {
 
     // List of subgroups = header of the csv files = soil condition here
     const subgroups = data.columns.slice(1)
